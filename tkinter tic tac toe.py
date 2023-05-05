@@ -214,14 +214,11 @@ def reset():
 	b8.place(x=180, y=130)
 	b9.place(x=180, y=220)
 
-# Create menue
-my_menu = Menu(win)
-win.config(menu=my_menu)
-
-# Create Options Menu
-options_menu = Menu(my_menu, tearoff=False)
-my_menu.add_cascade(label="Options", menu=options_menu)
-options_menu.add_command(label="Rest Game", command=reset)
+# Create reset and quit buttons
+reset_b=Button(win,text="Reset Game",font=("Helvetica",8),height=1,width=10,bg="plum2",command=reset)
+reset_b.place(x=50,y=330)
+exit_b=Button(win,text="Quit Game",font=("Helvetica",8),height=1,width=10,bg="plum2",command=win.destroy)
+exit_b.place(x=160,y=330)
 
 reset()
 
